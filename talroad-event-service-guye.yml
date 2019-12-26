@@ -4,23 +4,23 @@ server:
 spring:
   datasource:
     driver: com.mysql.jdbc.Driver
-    url: jdbc:mysql://10.0.200.211:3306/talroad_base?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
-    username: dev
-    password: dev
+    url: jdbc:mysql://127.0.0.1:3306/talroad_base?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: guye
+    password: guye
     
 slave:
   datasource:
     names: ds1,ds2
     ds1:
       driver: com.mysql.jdbc.Driver
-      url: jdbc:mysql://10.0.200.211:3306/talroad_base?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
-      username: dev
-      password: dev
+      url: jdbc:mysql://127.0.0.1:3306/talroad_base?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: guye
+      password: guye
     ds2:
       driver: com.mysql.jdbc.Driver
-      url: jdbc:mysql://10.0.200.211:3306/talroad_base?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
-      username: dev
-      password: dev
+      url: jdbc:mysql://127.0.0.1:3306/talroad_base?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: guye
+      password: guye
 
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
