@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     driver: com.mysql.jdbc.Driver
-    url: jdbc:mysql://10.0.200.211:3306/talroad_base?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
-    username: dev
-    password: dev
+    url: jdbc:mysql://127.0.0.1:3306/talroad_base?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: guye
+    password: guye
 
 
 slave:
@@ -14,19 +14,19 @@ slave:
     names: ds1,ds2,waterFine
     ds1:
       driver: com.mysql.jdbc.Driver
-      url: jdbc:mysql://10.0.200.211:3306/talroad_base?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
-      username: trkj
-      password: t1ch@TR
+      url: jdbc:mysql://127.0.0.1:3306/talroad_base?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: guye
+      password: guye
     ds2:
       driver: com.mysql.jdbc.Driver
-      url: jdbc:mysql://10.0.200.200:3306/db_enterprise_archives?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
-      username: trkj
-      password: t1ch@TR
+      url: jdbc:mysql://127.0.0.1:3306/db_enterprise_archives?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: guye
+      password: guye
     waterFine:
       driver: com.mysql.jdbc.Driver
-      url: jdbc:mysql://10.0.200.44:3306/db_water_fine_control?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false    
-      username: liuwenshuang   
-      password: azAZ922@lws
+      url: jdbc:mysql://127.0.0.1:3306/db_water_fine_control?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false    
+      username: guye 
+      password: guye
       
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
