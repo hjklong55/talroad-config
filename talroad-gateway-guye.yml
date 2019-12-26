@@ -1,0 +1,46 @@
+server:
+  port: 8098
+
+zuul:
+  ribbon:
+    eager-load:
+      enabled: true
+      clients: talroad-auth,talroad-base-service
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 10000
+    
+security:
+  encode:
+    key: '1234567887654321' #必须16位
+  validate:
+    code: true
+    preview: false
+  sessions: stateless
+  oauth2:
+    client:
+      client-id: talroad
+      client-secret: talroad
+    resource:
+      jwt:
+         key-uri: http://localhost:8002/oauth/token_key #解析jwt令牌所需要密钥的地址
+         key-value: "TALROAD"
+    authorization:
+      check-token-access: http://localhost:8002/oauth/check_token
+         
+ignore:
+  urls:
+    - /auth/**
+    - /mobile/**
+    - /base/sysUser/info
+    - /base/sysMenu/userMenu
+    - /swagger-resources/**
+    - /swagger-ui.html
+    - /*/v2/api-docs
+    - /swagger/api-docs
+    - /webjars/**
+    - /doc.html
+    - /grid/external/**
+  clients:
+    - app
