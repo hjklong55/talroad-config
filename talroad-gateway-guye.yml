@@ -40,7 +40,6 @@ ignore:
     - /*/v2/api-docs
     - /swagger/api-docs
     - /webjars/**
-    - /doc.html
     - /grid/external/**
   clients:
     - app
